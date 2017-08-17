@@ -94,7 +94,7 @@ ANL_LIBS    =
 #############################################################################
 
 CCFLAGS	   =	$(CC_OPTIONS) $(OPTLEV) $(CCDEFS) -I. -I../DTDISPLAY \
-                -I$(PTYPESHOME)/include -I$(CBFHOME)/include \
+                -I$(PTYPESHOME)/include -I$(PTYPESHOME)/include/ptypes -I$(CBFHOME)/include \
 		-L/usr/local/lib -L../DTDISPLAY -L../../lib -L../lib -L. 
 
 CCFLAGSOPT   =	-O0 -g $(CCDEFS) -I. -I../DTDISPLAY \
