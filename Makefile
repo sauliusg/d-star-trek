@@ -52,7 +52,7 @@ ifeq (,$(CBFHOME))
 endif
 
 SHELL := /bin/sh
-OS    := $(shell [ "Darwin" == "`uname`" ] && echo osx || echo linux)
+OS    := $(shell [ "Darwin" = "`uname`" ] && echo osx || echo linux)
 ARCH  := $(shell uname -m)
 
 $(info )
@@ -62,7 +62,7 @@ $(info Architecture is $(ARCH))
 OSTYPE_EXT.osx   = darwin11
 OSTYPE_EXT.linux = linux
 GMAKE.osx        = /usr/bin/make
-GMAKE.linux      = /usr/bin/gmake
+GMAKE.linux      = ${MAKE}
 
 OSTYPE     = _$(OSTYPE_EXT.$(OS))
 GMAKE      = $(GMAKE.$(OS))
